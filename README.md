@@ -1,9 +1,9 @@
+**This project is a WIP and is currently missing telegraf to be configured to poll. This piece is *required* and this will not work until avilable. Stay tuned, currently finishing up authentication to rivian in a more generic way.**
+
 # rivflux
 Rivian R1T Data logger using InfluxDB, Telegraf, and Grafana.
 
 The goal of this project is to be able to surface battery history, degradation tracking, location (if enabled), charging, and other metrics available.
-
-This project is a WIP and is currently missing telegraf to be configured to poll. This piece is *required* and this will not work until avilable. Stay tuned, currently finishing up authentication to rivian in a more generic way.
 
 This repo will also include a dashboard and telegraf config to track metrics for OpenEVSE.
 
