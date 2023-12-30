@@ -8,6 +8,8 @@ This project is a WIP and is currently missing telegraf to be configured to poll
 This repo will also include a dashboard and telegraf config to track metrics for OpenEVSE.
 
 ### How to Use
+Install `docker` and `docker-compose`.
+
 Configure the fields in `docker-compose.yaml`
 - openevse ip
 - rivian vehicle id
