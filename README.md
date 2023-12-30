@@ -16,3 +16,8 @@ Configure the fields in `docker-compose.yaml`
 
 - Open grafana at `http://127.0.0.1:3000`
 - Login using the credentials (`GF_SECURITY_ADMIN_USER` \ `GF_SECURITY_ADMIN_PASSWORD`) configured in `docker-compose.yaml`
+
+### Example
+<img width="1508" alt="0" src="https://github.com/rivflux/rivflux/assets/155249827/18f7d074-6a49-4b33-bc0b-bd5d4ea740e3">
+<img width="1507" alt="1" src="https://github.com/rivflux/rivflux/assets/155249827/820999da-f84d-4dde-be8a-f86d5b391b2b">
+<img width="1493" alt="2" src="https://github.com/rivflux/rivflux/assets/155249827/08e47ed7-657a-4a3a-91d0-7bd77c2b21ff">
