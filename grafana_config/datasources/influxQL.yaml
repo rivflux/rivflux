@@ -1,0 +1,12 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb-influxql
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    jsonData:
+      dbName: telegraf
+      httpHeaderName1: Authorization
+    secureJsonData:
+      httpHeaderValue1: Token rivflux_token_abc

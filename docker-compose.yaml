@@ -1,0 +1,41 @@
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - 8086:8086
+    restart: unless-stopped
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=rivflux
+      - DOCKER_INFLUXDB_INIT_PASSWORD=rivflux_password
+      - DOCKER_INFLUXDB_INIT_ORG=rivflux
+      - DOCKER_INFLUXDB_INIT_BUCKET=telegraf
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=rivflux_token_abc
+    volumes:
+      - ./influxdb_config:/etc/influxdb2
+      - ./influxdb_data:/var/lib/influxdb2
+  telegraf:
+    build: ./telegraf/
+    container_name: telegraf
+    environment:
+      - OPENEVSE_URL=http://<openevse_ip_address>/status
+      - RIVIAN_VEHICLE_ID=<00-00000000>
+      - INFLUX_TOKEN=rivflux_token_abc
+    restart: unless-stopped
+    volumes:
+      - ./telegraf_config:/etc/telegraf/
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=rivflux
+      - GF_SECURITY_ADMIN_PASSWORD=rivflux_password
+    volumes:
+      - ./grafana_config/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana_config/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana_dashboards:/var/lib/grafana/dashboards
