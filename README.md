@@ -19,9 +19,9 @@ Grafana is used to visualize the data in influxdb
 
 
 ### Example Screenshot
-<img width="1508" alt="0" src="https://github.com/rivflux/rivflux/assets/155249827/18f7d074-6a49-4b33-bc0b-bd5d4ea740e3">
-<img width="1507" alt="1" src="https://github.com/rivflux/rivflux/assets/155249827/820999da-f84d-4dde-be8a-f86d5b391b2b">
-<img width="1493" alt="2" src="https://github.com/rivflux/rivflux/assets/155249827/08e47ed7-657a-4a3a-91d0-7bd77c2b21ff">
+<img width="1510" alt="0" src="https://github.com/rivflux/rivflux/assets/155249827/8e26413f-7e95-4726-a5bb-c280eeb36ac0">
+<img width="1497" alt="1" src="https://github.com/rivflux/rivflux/assets/155249827/cfea97ed-038d-4872-8275-a836e5ba79fd">
+<img width="1487" alt="2" src="https://github.com/rivflux/rivflux/assets/155249827/412949af-9a7d-44ac-9f7e-2d396d63b7b4">
 
 
 ### Unofficial Rivian API Docs Used
