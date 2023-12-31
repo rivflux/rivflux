@@ -1,3 +1,4 @@
 influxdb_config
 influxdb_data
 .idea
+*.pickle
