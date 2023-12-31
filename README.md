@@ -42,7 +42,7 @@ Telegraf is configured to poll using `rivian_cli.py` every five minutes. It is c
  Limit,Charge End,Charge Elapsed,Charge Power,Charge Session")
 ```
 
-> Please refer to around line 997 to see the updated values in case they have changed.
+> Please refer to around line [1013](https://github.com/rivflux/rivflux/blob/8e6e1efe447d9c6b8f30a61d544646d3bdb67b54/telegraf/rivian/rivian-python-api/src/rivian_python_api/rivian_cli.py#L1013) to see the updated values in case they have changed.
 
 
 #### New Rivian account for this
