@@ -31,7 +31,7 @@ This currently uses an off the shelf tool, slightly modified to poll the rivian 
 
 https://github.com/the-mace/rivian-python-api
 
-The modifications were necessary as it uses `rivian_cli.py`'s query command to output in the format that influxdb's telegraph can read and understand.  See the `rivian-cli.py` at around line 997 to see the data being logged, as this is the def for the query command that telegraf is using.
+The modifications were necessary as it uses `rivian_cli.py`'s query command to output in the format that influxdb's telegraph can read and understand.  See the techincal details below to see the data being logged, as this is the def for the query command that telegraf is using.
 
 
 #### Techincal Details
