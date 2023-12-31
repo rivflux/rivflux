@@ -64,14 +64,22 @@ Install `docker` and `docker-compose`.
 
 Configure the fields in `docker-compose.yaml`
 - openevse ip (will make this optional since not everyone has OpenEVSE, use 127.0.0.1 for now if you don't have one, telegraf will throw errors every few minutes but it's ok for now)
-- rivian vehicle id
+- rivian vehicle id (TODO - how to find this (after logging in/see below): `python3 rivian-python-api/src/rivian_python_api/rivian_cli.py --vehicles`)
 
 
 Login to rivian's API and generate the pickle file to store the credentials to be able to use when polling.
 ### todo - how to do this and update docker-compose to make it easy to mount this secret
 high level now (will clean this up)
 - generate rivian_auth.pickle using instructions in https://github.com/the-mace/rivian-python-api#login
-- save in `telegraf/rivian/rivian_auth.pickle`
+
+```
+cd rivflux/telegraf/rivian
+export RIVIAN_USERNAME="email@email.com"; export RIVIAN_PASSWORD="super_secure_password"; python3 rivian-python-api/src/rivian_python_api/rivian_cli.py --login
+
+Login successful
+```
+
+- be sure the pickle file is saved in `telegraf/rivian/rivian_auth.pickle` (it should be from the previous command)
 - run `docker-compose build`
 
 Now start the stack and start logging!
